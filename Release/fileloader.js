@@ -20,8 +20,8 @@ Module.expectedDataFileDownloads++;
     } else {
       throw 'using preloaded data can only be done on a web page or in a web worker';
     }
-    var PACKAGE_NAME = 'webgl4.data';
-    var REMOTE_PACKAGE_BASE = 'webgl4.data';
+    var PACKAGE_NAME = 'webgl5.data';
+    var REMOTE_PACKAGE_BASE = 'webgl5.data';
     if (typeof Module['locateFilePackage'] === 'function' && !Module['locateFile']) {
       Module['locateFile'] = Module['locateFilePackage'];
       Module.printErr('warning: you defined Module.locateFilePackage, that has been renamed to Module.locateFile (using your locateFilePackage for now)');
@@ -30,8 +30,8 @@ Module.expectedDataFileDownloads++;
                               Module['locateFile'](REMOTE_PACKAGE_BASE) :
                               ((Module['filePackagePrefixURL'] || '') + REMOTE_PACKAGE_BASE);
   
-      var REMOTE_PACKAGE_SIZE = 54524673;
-      var PACKAGE_UUID = 'bf2008f6-338d-405d-afec-70f0f0a24850';
+      var REMOTE_PACKAGE_SIZE = 54524409;
+      var PACKAGE_UUID = '71a0cb7f-713c-4281-9271-bd702f199664';
     
     function fetchRemotePackage(packageName, packageSize, callback, errback) {
       var xhr = new XMLHttpRequest();
@@ -143,24 +143,24 @@ Module['FS_createPath']('/', 'Resources', true, true);
     new DataRequest(1255968, 1407264, 0, 0).open('GET', '/level7');
     new DataRequest(1407264, 1645696, 0, 0).open('GET', '/level8');
     new DataRequest(1645696, 1809376, 0, 0).open('GET', '/level9');
-    new DataRequest(1809376, 1978528, 0, 0).open('GET', '/mainData');
-    new DataRequest(1978528, 1978549, 0, 0).open('GET', '/methods_pointedto_by_uievents.xml');
-    new DataRequest(1978549, 2043573, 0, 0).open('GET', '/resources.assets');
-    new DataRequest(2043573, 47854393, 0, 0).open('GET', '/sharedassets0.assets');
-    new DataRequest(47854393, 47858885, 0, 0).open('GET', '/sharedassets1.assets');
-    new DataRequest(47858885, 47863377, 0, 0).open('GET', '/sharedassets10.assets');
-    new DataRequest(47863377, 47868133, 0, 0).open('GET', '/sharedassets11.assets');
-    new DataRequest(47868133, 47872637, 0, 0).open('GET', '/sharedassets2.assets');
-    new DataRequest(47872637, 47877129, 0, 0).open('GET', '/sharedassets3.assets');
-    new DataRequest(47877129, 47925693, 0, 0).open('GET', '/sharedassets4.assets');
-    new DataRequest(47925693, 47930173, 0, 0).open('GET', '/sharedassets5.assets');
-    new DataRequest(47930173, 49513597, 0, 0).open('GET', '/sharedassets6.assets');
-    new DataRequest(49513597, 49844513, 0, 0).open('GET', '/sharedassets7.assets');
-    new DataRequest(49844513, 49849149, 0, 0).open('GET', '/sharedassets8.assets');
-    new DataRequest(49849149, 49858333, 0, 0).open('GET', '/sharedassets9.assets');
-    new DataRequest(49858333, 52128773, 0, 0).open('GET', '/Il2CppData/Metadata/global-metadata.dat');
-    new DataRequest(52128773, 54020789, 0, 0).open('GET', '/Resources/unity_default_resources');
-    new DataRequest(54020789, 54524673, 0, 0).open('GET', '/Resources/unity_builtin_extra');
+    new DataRequest(1809376, 1978264, 0, 0).open('GET', '/mainData');
+    new DataRequest(1978264, 1978285, 0, 0).open('GET', '/methods_pointedto_by_uievents.xml');
+    new DataRequest(1978285, 2043309, 0, 0).open('GET', '/resources.assets');
+    new DataRequest(2043309, 47854129, 0, 0).open('GET', '/sharedassets0.assets');
+    new DataRequest(47854129, 47858621, 0, 0).open('GET', '/sharedassets1.assets');
+    new DataRequest(47858621, 47863113, 0, 0).open('GET', '/sharedassets10.assets');
+    new DataRequest(47863113, 47867869, 0, 0).open('GET', '/sharedassets11.assets');
+    new DataRequest(47867869, 47872373, 0, 0).open('GET', '/sharedassets2.assets');
+    new DataRequest(47872373, 47876865, 0, 0).open('GET', '/sharedassets3.assets');
+    new DataRequest(47876865, 47925429, 0, 0).open('GET', '/sharedassets4.assets');
+    new DataRequest(47925429, 47929909, 0, 0).open('GET', '/sharedassets5.assets');
+    new DataRequest(47929909, 49513333, 0, 0).open('GET', '/sharedassets6.assets');
+    new DataRequest(49513333, 49844249, 0, 0).open('GET', '/sharedassets7.assets');
+    new DataRequest(49844249, 49848885, 0, 0).open('GET', '/sharedassets8.assets');
+    new DataRequest(49848885, 49858069, 0, 0).open('GET', '/sharedassets9.assets');
+    new DataRequest(49858069, 52128509, 0, 0).open('GET', '/Il2CppData/Metadata/global-metadata.dat');
+    new DataRequest(52128509, 54020525, 0, 0).open('GET', '/Resources/unity_default_resources');
+    new DataRequest(54020525, 54524409, 0, 0).open('GET', '/Resources/unity_builtin_extra');
 
     function processPackageData(arrayBuffer) {
       Module.finishedDataFileDownloads++;
@@ -199,10 +199,10 @@ Module['FS_createPath']('/', 'Resources', true, true);
           DataRequest.prototype.requests["/Il2CppData/Metadata/global-metadata.dat"].onload();
           DataRequest.prototype.requests["/Resources/unity_default_resources"].onload();
           DataRequest.prototype.requests["/Resources/unity_builtin_extra"].onload();
-          Module['removeRunDependency']('datafile_webgl4.data');
+          Module['removeRunDependency']('datafile_webgl5.data');
 
     };
-    Module['addRunDependency']('datafile_webgl4.data');
+    Module['addRunDependency']('datafile_webgl5.data');
   
     if (!Module.preloadResults) Module.preloadResults = {};
   
